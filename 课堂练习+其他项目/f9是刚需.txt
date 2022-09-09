@@ -1,0 +1,22 @@
+
+【0】从附网址或群文件下载 tor-win32-0.4.5.7.zip
+
+【1】解压缩到一个合适的目录，
+
+【2】然后在tor.exe位置创建文本文件“torrc.txt”，
+其内容可以有如下4行：
+SOCKSPort 0.0.0.0:59050
+SOCKSPort :::59050
+UseBridges 1
+Bridge [2001:948:7:2::164]:6001
+
+【3】然后执行
+tor.exe -f torrc.txt
+注意观察是否到100%。
+即可获得一个socks代理端口59050
+
+
+附：
+Windows Expert Bundle
+https://www.torproject.org/download/tor/
+https://www.torproject.org/dist/torbrowser/10.0.16/tor-win32-0.4.5.7.zip
